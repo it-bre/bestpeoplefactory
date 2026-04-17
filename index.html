@@ -139,7 +139,7 @@ function startLottery() {
   document.getElementById('winner-inner').style.display = 'none';
 
   spinEl.currentTime = 0;
-  spinEl.play().catch(() => {});
+  spinEl.play().catch(() => {}); winnerEl.play().then(() => { winnerEl.pause(); winnerEl.currentTime = 0; }).catch(() => {});
 
   const startTime = Date.now();
   const sImg = document.getElementById('spin-img');
